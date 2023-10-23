@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <section>
+            <h2>Upload an XML File</h2>
+            <form id="upload-form" enctype="multipart/form-data" data-ajax="true">
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control is-invalid" id="file-input" name="xmlFile" accept=".xml" aria-label="file example" required>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control is-invalid" id="filename-input" name="filename" placeholder="Enter a filename" required>
+                </div>
+                <button type="submit" id="upload-button" class="btn btn-primary">Convert to JSON</button>
+                <div id="loader" class="alert alert-info mt-3" style="display: none;">Uploading...</div>
+            </form>
+            <div id="error-container" class="alert alert-danger" style="display: none;"></div>
+            <div id="success-container" class="alert alert-success" style="display: none;"></div>
+        </section>
+    </div>
+</div>
+
+
