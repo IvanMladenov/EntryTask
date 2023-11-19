@@ -28,6 +28,7 @@ namespace XmlToJson
             services.AddControllersWithViews();
             services.AddScoped<IConverter, XmlToJsonConverter>();
             services.AddScoped<IFileWriter, FileWriter>();
+            services.AddScoped<IDownload, Download>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
